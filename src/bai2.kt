@@ -1,4 +1,4 @@
-fun isTamGiac(x: Double,y:Double,z:Double): Boolean{
+fun isTriangle(x: Double,y:Double,z:Double): Boolean{
     return x+y>z && x+z>y && y+z>x
 }
 
@@ -12,7 +12,7 @@ fun main(){
     var c = readLine()?.toDoubleOrNull()
 
     if (a!= null && b!= null && c!= null){
-        if (isTamGiac(a,b,c)){
+        if (isTriangle(a,b,c)){
             println("Đây là 3 cạnh của 1 tam giác")
         }else{
             println("Đây là 3 cạnh của 1 tam giác")

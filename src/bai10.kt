@@ -1,5 +1,5 @@
-class SoNguyenTo(a:Int) {
-    fun isSoNguyenTo(a: Int): Boolean {
+class Prime(a:Int) {
+    fun isPrime(a: Int): Boolean {
         if (a < 2) return false
         for (i in 2..Math.sqrt(a.toDouble()).toInt()) {
             if (a % i == 0) return false
@@ -13,8 +13,8 @@ fun main() {
     val a = readLine()?.toIntOrNull()
 
     if (a != null) {
-        val primeChecker = SoNguyenTo(a)
-        if (primeChecker.isSoNguyenTo(a)) {
+        val primeChecker = Prime(a)
+        if (primeChecker.isPrime(a)) {
             println("Số $a là số nguyên tố.")
         } else {
             println("Số $a không là số nguyên tố.")

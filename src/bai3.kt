@@ -1,5 +1,5 @@
-fun isTamGiacVuong(x: Double,y:Double,z:Double): Boolean{
-    return isTamGiac(x,y,z) && x*x+y*y>z*z && x*x+z*z>y*y && y*y+z*z>x*x
+fun isRightTriangle(x: Double,y:Double,z:Double): Boolean{
+    return isTriangle(x,y,z) && x*x+y*y>z*z && x*x+z*z>y*y && y*y+z*z>x*x
 }
 
 fun main(){
@@ -12,8 +12,8 @@ fun main(){
     var c = readLine()?.toDoubleOrNull()
 
     if (a!= null && b!= null && c!= null){
-        if (isTamGiac(a,b,c)){
-            if (isTamGiacVuong(a,b,c))
+        if (isTriangle(a,b,c)){
+            if (isRightTriangle(a,b,c))
                 println("Đây là 3 cạnh của 1 tam giác vuông")
             else
                 println("Đây là 3 cạnh của 1 tam giác")

@@ -3,7 +3,7 @@ class Triangle () {
     var b: Double = 0.0
     var c: Double = 0.0
 
-    fun nhapThongTin(){
+    fun enterValue(){
         println("Nhập vào 3 cạnh của tam giác")
         print("x = ")
         var a = readLine()?.toDoubleOrNull()
@@ -19,22 +19,22 @@ class Triangle () {
             this.c=c
     }
 
-    fun tinhChuVi(): Double {
-        return if (isTamGiac(a,b,c)) a + b + c else 0.0
+    fun perimerter(): Double {
+        return if (isTriangle(a,b,c)) a + b + c else 0.0
     }
 
-    fun tinhDienTich(): Double {
-        return if (isTamGiac(a,b,c)) {
-            val p = tinhChuVi() / 2
+    fun area(): Double {
+        return if (isTriangle(a,b,c)) {
+            val p = perimerter() / 2
             Math.sqrt(p * (p - a) * (p - b) * (p - c))
         } else 0.0
     }
 
-    fun inThongTin() {
-        if (isTamGiac(a,b,c)) {
+    fun printInfo() {
+        if (isTriangle(a,b,c)) {
             println("Tam giác hợp lệ.")
-            println("Chu vi: ${tinhChuVi()}")
-            println("Diện tích: ${tinhDienTich()}")
+            println("Chu vi: ${perimerter()}")
+            println("Diện tích: ${area()}")
         } else {
             println("Ba cạnh không tạo thành tam giác.")
         }
@@ -44,6 +44,6 @@ class Triangle () {
 fun main() {
     var triangle = Triangle()
 
-    triangle.nhapThongTin()
-    triangle.inThongTin()
+    triangle.enterValue()
+    triangle.printInfo()
 }

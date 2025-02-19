@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    var choiTiep: String?
+    var playAgain: String?
 
     do {
         val quest = Random.nextInt(0, 101)
@@ -35,9 +35,9 @@ fun main() {
 
         do {
             print("Bạn có muốn chơi lại không? (y/n): ")
-            choiTiep = readLine()?.lowercase()
-        }while (choiTiep==null)
-    } while (choiTiep == "y")
+            playAgain = readLine()?.lowercase()
+        }while (playAgain==null)
+    } while (playAgain == "y")
 
     println("Kết thúc chương trình.")
 }
