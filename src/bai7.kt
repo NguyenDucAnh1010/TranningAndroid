@@ -16,18 +16,15 @@ class UCLNBCNN(var a: Int, var b: Int) {
 
 fun main(){
     print("a = ")
-    var a = readLine()
+    var a = readLine()?.toIntOrNull()
     print("b = ")
-    var b = readLine()
+    var b = readLine()?.toIntOrNull()
 
     if (a!= null && b!= null){
-        var x = a.toInt()
-        var y = b.toInt()
-
-        val z = UCLNBCNN(x, y)
+        val z = UCLNBCNN(a, b)
         z.inThongTin()
     }else{
-        println("Thông tin không đầy đủ")
+        println("Thông tin không hợp lệ")
     }
 }
 

@@ -11,20 +11,20 @@ fun main() {
         println("Chào mừng đến với trò chơi Đoán số! Bạn có 5 lần thử.")
 
         while (count < 5) {
-            var guess: String?
+            var guess: Int?
             do {
                 print("Nhập một số từ 0-100: ")
-                guess = readLine()
+                guess = readLine()?.toIntOrNull()
             }while (guess==null)
 
             count++
             when {
-                guess.toInt() == quest -> {
+                guess == quest -> {
                     println("Chúc mừng! Bạn đã đoán đúng số $quest.")
                     check = true
                     break
                 }
-                guess.toInt() < quest -> println("Số bạn đoán nhỏ hơn số bí mật.")
+                guess < quest -> println("Số bạn đoán nhỏ hơn số bí mật.")
                 else -> println("Số bạn đoán lớn hơn số bí mật.")
             }
         }

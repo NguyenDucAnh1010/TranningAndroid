@@ -28,19 +28,15 @@ fun giaiPTBac2(a:Double,b:Double,c:Double) {
 fun main(){
     println("Nhập các hệ số cuả phương trình ax2 + bx + c = 0.")
     print("a = ")
-    var a = readLine()
+    var a = readLine()?.toDoubleOrNull()
     print("b = ")
-    var b = readLine()
+    var b = readLine()?.toDoubleOrNull()
     print("c = ")
-    var c = readLine()
+    var c = readLine()?.toDoubleOrNull()
 
     if (a!= null && b!= null && c!= null){
-        var x = a.toDouble()
-        var y = b.toDouble()
-        var z = c.toDouble()
-
-        giaiPTBac2(x,y,z)
+        giaiPTBac2(a,b,c)
     }else{
-        println("Thông tin không đầy đủ")
+        println("Thông tin không hợp lệ")
     }
 }

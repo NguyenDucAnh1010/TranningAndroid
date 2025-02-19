@@ -8,17 +8,17 @@ class Triangle () {
     fun nhapThongTin(){
         println("Nhập vào 3 cạnh của tam giác")
         print("x = ")
-        var a = readLine()
+        var a = readLine()?.toDoubleOrNull()
         if (a!=null)
-            this.a=a.toDouble()
+            this.a=a
         print("b = ")
-        var b = readLine()
+        var b = readLine()?.toDoubleOrNull()
         if (b!=null)
-            this.b=b.toDouble()
+            this.b=b
         print("c = ")
-        var c = readLine()
+        var c = readLine()?.toDoubleOrNull()
         if (c!=null)
-            this.c=c.toDouble()
+            this.c=c
     }
 
     fun tinhChuVi(): Double {

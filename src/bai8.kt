@@ -1,23 +1,20 @@
 fun main(){
     print("a = ")
-    var a = readLine()
+    var a = readLine()?.toDoubleOrNull()
     print("b = ")
-    var b = readLine()
+    var b = readLine()?.toDoubleOrNull()
     print("ch = ")
     var ch = readLine()
 
     if (a!= null && b!= null && ch!= null){
-        var x = a.toDouble()
-        var y = b.toDouble()
-
         println("Kết quả: "+when (ch){
-            "+" -> x+y
-            "-" -> x-y
-            "*" -> x*y
-            "/" -> x/y
+            "+" -> a+b
+            "-" -> a-b
+            "*" -> a*b
+            "/" -> a/b
             else -> "không hợp lệ"
         })
     }else{
-        println("Thông tin không đầy đủ")
+        println("Thông tin không hợp lệ")
     }
 }

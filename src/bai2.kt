@@ -5,23 +5,19 @@ fun isTamGiac(x: Double,y:Double,z:Double): Boolean{
 fun main(){
     println("Nhập vào 3 cạnh của tam giác")
     print("a = ")
-    var a = readLine()
+    var a = readLine()?.toDoubleOrNull()
     print("b = ")
-    var b = readLine()
+    var b = readLine()?.toDoubleOrNull()
     print("c = ")
-    var c = readLine()
+    var c = readLine()?.toDoubleOrNull()
 
     if (a!= null && b!= null && c!= null){
-        var x = a.toDouble()
-        var y = b.toDouble()
-        var z = c.toDouble()
-
-        if (isTamGiac(x,y,z)){
+        if (isTamGiac(a,b,c)){
             println("Đây là 3 cạnh của 1 tam giác")
         }else{
             println("Đây là 3 cạnh của 1 tam giác")
         }
     }else{
-        println("Thông tin không đầy đủ")
+        println("Thông tin không hợp lệ")
     }
 }
